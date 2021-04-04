@@ -1,4 +1,78 @@
 
+.search_icon{
+display: none;
+}
+.pa_select{
+display: none;
+}
+.country_select{
+display: none;
+}
+.ecoregion_select{
+display: none;
+}
+.live_select{
+display: none;
+}
+.mapboxgl-ctrl-geocoder input[type='text'] {
+  font-size: 12px;
+  font-size: 12px;
+  width: 337px;
+  border: 0;
+  background-color: #252828!important;
+  height: 40px;
+  margin: 0;
+  color: rgb(156 164 169)#252828!important;
+  padding: 10px 10px 10px 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mapboxgl-ctrl-geocoder ul {
+  background-color: #252828!important;
+  border-radius: 0 0 3px 3px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  font-size: 12px;
+  color: #9fa8ad!important;
+}
+.mapboxgl-ctrl-geocoder {
+  font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: relative;
+  background-color: #252828!important;
+  width: 33.3333%;
+  min-width: 240px;
+  max-width: 360px;
+  z-index: 1;
+  border-radius: 0px!important;
+}
+.mapboxgl-ctrl-geocoder ul > li.active > a {
+  color: #ffffff!important;
+  background-color: #252828!important;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mapboxgl-ctrl-geocoder .geocoder-pin-right * {
+  background-color: #252828!important;
+  z-index: 2;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+.mapboxgl-ctrl-geocoder input:focus {
+  color: rgb(218 218 218 / 75%)!important;
+  outline: 0;
+  box-shadow: none;
+  outline: thin dotted\8;
+}
 .icon_right{
   position: absolute;
   right: 25px;
@@ -113,11 +187,11 @@
 #pa_title{
   display: none;
   position: absolute;
-  left: 26px;
-  top: 66px;
+  left: 27px;
+  top: 133px;
   background-color: #252828;
   padding: 10px;
-  box-shadow: -3px 4px 12px rgb(0 0 0 / 34%);
+  box-shadow: -1px -1px 3px rgb(0 0 0 / 34%);
   overflow: auto!important;
   max-height: 80%;
   min-width: 387px;
@@ -1091,7 +1165,7 @@ div.mapboxgl-popup-content > i
   .mapboxgl-ctrl-geocoder { min-width:100%; }
   #country_var_dropdown{
     display: none;
-    top: 64px;
+    top: 134px;
     position: absolute;
     margin-left: 27px;
     background-color: #252828;
@@ -1181,19 +1255,18 @@ div.mapboxgl-popup-content > i
   outline: -webkit-focus-ring-color auto 0px!important;
 }
   #main_tools{
-
     POSITION: absolute;
-    MARGIN-LEFT: 26PX;
-    MARGIN-TOP: 5PX;
-    PADDING-TOP: 5PX;
+    MARGIN-LEFT: 27PX;
+    MARGIN-TOP: 6PX;
+    PADDING-TOP: 7PX;
     TEXT-ALIGN: CENTER;
-    background-color: #1a1a1bde;
+    background-color: #252828;
     padding-right: 7px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
   .icon_custom{
-    BACKGROUND-COLOR: #252828;
+    BACKGROUND-COLOR: #202224;
     PADDING-TOP: 10PX!IMPORTANT;
     /* BORDER-RADIUS: 12PX; */
     padding-bottom: 5px!important;
@@ -1224,10 +1297,10 @@ div.mapboxgl-popup-content > i
   
   }
   #main_tools > div > div.col.s12.m6.l3.icon_custom.layers_icons > a > span{
-    font-size: 16px;
+    font-size: 1vw;
   }
   #main_tools > div > div.col.s12.m6.l3.icon_custom.layers_icon > a > span{
-    font-size: 16px;
+    font-size: 1vw;
   }
   .modal-content {
     position: relative;
@@ -1391,16 +1464,16 @@ div.mapboxgl-popup-content > i
     color: #77bb0b;
   }
   #pa_stats{
-  display: none;
-  position: absolute;
-  left: 26px;
-  top: 132px;
-  background-color: #252828;
-  padding: 10px;
-  box-shadow: -3px 4px 12px rgb(0 0 0 / 34%);
-  overflow: auto!important;
-  max-height: 80%;
-  width: 387px;
+    display: none;
+    position: absolute;
+    left: 27px;
+    top: 195px;
+    background-color: #252828;
+    padding: 10px;
+    box-shadow: -3px 4px 12px rgb(0 0 0 / 34%);
+    overflow: auto!important;
+    max-height: 60%;
+    width: 387px;
   }
   #numind{
     color: #5dac27;

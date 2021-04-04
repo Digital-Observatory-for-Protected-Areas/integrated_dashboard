@@ -3,6 +3,14 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
+  $('.all_tools').click(function() {
+    $('.pa_select').toggle();
+    $('.country_select').toggle();
+    $('.ecoregion_select').toggle();
+    $('.live_select').toggle();
+    $('.search_icon').toggle();
+})
+
 
   $(document).ready(function(){
     $('select').formSelect();
@@ -1253,6 +1261,7 @@ $('.search_icon').click(function() {
 
 $('.country_select').click(function() {
   $('#pa_title').hide();
+  $('#geocoder').show();
   $('#pa_stats').hide();
   $('#live_layer_container').hide();
   $(".select-dropdown").val("Select a layer");
@@ -1308,6 +1317,7 @@ $('.ecoregion_select').click(function() {
 })
 
 $('.pa_select').click(function() {
+  $('#pa_stats').hide();
   $('#live_var_dropdown').click();
   $('#live_var_dropdown').hide();
   map.setFilter("dopa_geoserver_global_dash", ["in", "id", "xxx"]);
@@ -1344,12 +1354,15 @@ $('.ecoregion_select').click(function() {
         if($('#live_layer_container').is(':visible')) {
           $('#pa_stats').addClass("relPosition");
           $('#pa_title').addClass("relPosition_t");
+          $('#geocoder').hide();
          //$('#country_var_dropdown').show().prependTo('#pa_stats');
       }else{
         $('#pa_stats').removeClass("relPosition");
         $('#pa_title').removeClass("relPosition_t");
+        $('#geocoder').show();
       }
       $('#pa_stats').empty().prepend('<img id="theImg" src="img/load_.gif" />')
+        
         $('#pa_stats').show();
         $('#pa_title').show();
         $('#pa_title').html(e.features[0].properties.name);
@@ -2230,6 +2243,7 @@ $('.ecoregion_select').click(function() {
           });
 // Country Popup
         map.on('click', 'dopa_geoserver_global_dash', function (e) {
+          $('#geocoder').show();
           if($('#live_layer_container').is(':visible')) {
             $('#pa_stats').addClass("relPosition");
             $('#country_var_dropdown').addClass("relPosition");
